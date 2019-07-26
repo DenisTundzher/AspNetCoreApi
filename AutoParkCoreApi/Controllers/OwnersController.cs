@@ -12,12 +12,6 @@ namespace AutoParkCoreApi.Controllers
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class OwnersController : ControllerBase
     {
-        //private readonly ApplicationDbContext _context;
-
-        //public OwnersController(ApplicationDbContext context)
-        //{
-        //    _context = context;
-        //}
 
         private readonly IOwnerService _ownerService;
 
@@ -36,7 +30,7 @@ namespace AutoParkCoreApi.Controllers
             return Ok(owners);
         }
 
-        //From CarController..
+
         [HttpPost("{id}")]
         [Route("Owners/Cars/{id}")]
         public async Task<IActionResult> Cars([FromRoute]int id)
