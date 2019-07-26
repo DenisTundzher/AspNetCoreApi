@@ -11,6 +11,3 @@ namespace DAL.Interface
         bool Insert(User user);
     }
 }
-
-
-//IEnumerable<User> GetAll();

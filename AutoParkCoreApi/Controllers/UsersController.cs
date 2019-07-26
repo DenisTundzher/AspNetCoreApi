@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace AutoParkCoreApi.Controllers
 {
     [Authorize]
-    //[ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
@@ -47,22 +46,3 @@ namespace AutoParkCoreApi.Controllers
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/*
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            var users = _userService.GetAll();
-            return Ok(users);
-        }
-        */

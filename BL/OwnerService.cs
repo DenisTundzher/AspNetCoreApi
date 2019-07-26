@@ -27,8 +27,6 @@ namespace BL
 
         public ListOwners OwnersSorting(OwnerFormData ownerFormData)
         {
-            //return Mapper.Map<IEnumerable<OwnerModel>>(_ownerRepository.GetAllSorting(ownerFormData));
-
             ListOwners listOwners = new ListOwners();
             listOwners.Owners = Mapper.Map<IEnumerable<OwnerModel>>(_ownerRepository.GetAllSorting(ownerFormData));
             listOwners.TotalPages = _ownerRepository.TotalPages(ownerFormData.PageSize);
@@ -49,11 +47,7 @@ namespace BL
             await _ownerRepository.Insert(Mapper.Map<Owner>(owner));
         }
 
-        /// <summary>
-        /// Get Owner by Id
-        /// </summary>
-        /// <param name="id">Owner Model Id</param>
-        /// <returns></returns>
+
         public async Task<OwnerModel> GetOwnerById(int id)
         {
             return Mapper.Map<OwnerModel>(await _ownerRepository.GetById(id));
